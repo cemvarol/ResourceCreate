@@ -37,5 +37,7 @@ az vm create --resource-group $RG -n $VM01 -l $L --image Win2019DataCenter --adm
 
 az vm disk attach -g Datas --vm-name DTVM01 --name Datas --new
 
+az lock create --name Dont --resource-group $RG --lock-type Delete
+
 
 #
