@@ -37,9 +37,9 @@ export SUBNETN=$(az network vnet subnet show --resource-group $RG --vnet-name $V
 
 az network vnet subnet update -g $RG --vnet-name $VNet -n $SUBNETN --network-security-group $Nsg
 
-az vm create --resource-group $RG -n $VM01 -l $L --image Win2019DataCenter --admin-username $user --admin-password $pass --size $size1 --subnet $SUBNETID --boot-diagnostics-storage $D --license-type Windows_Server --nsg "" --no-wait
-az vm create --resource-group $RG -n $VM02 -l $L --image Win2019DataCenter --admin-username $user --admin-password $pass --size $size1 --subnet $SUBNETID --boot-diagnostics-storage $D --license-type Windows_Server --nsg "" --no-wait
-az vm create --resource-group $RG -n $VM03 -l $L --image Win2019DataCenter --admin-username $user --admin-password $pass --size $size1 --subnet $SUBNETID --boot-diagnostics-storage $D --license-type Windows_Server --nsg "" --no-wait
+az vm create --resource-group $RG -n $VM01 -l $L --image Win2019DataCenter --admin-username $user --admin-password $pass --size $size1 --public-ip-address "" --subnet $SUBNETID --boot-diagnostics-storage $D --license-type Windows_Server --nsg "" --no-wait
+az vm create --resource-group $RG -n $VM02 -l $L --image Win2019DataCenter --admin-username $user --admin-password $pass --size $size1 --public-ip-address "" --subnet $SUBNETID --boot-diagnostics-storage $D --license-type Windows_Server --nsg "" --no-wait
+az vm create --resource-group $RG -n $VM03 -l $L --image Win2019DataCenter --admin-username $user --admin-password $pass --size $size1 --public-ip-address "" --subnet $SUBNETID --boot-diagnostics-storage $D --license-type Windows_Server --nsg "" --no-wait
 az vm create --resource-group $RG -n $VM04 -l $L --image Win2019DataCenter --admin-username $user --admin-password $pass --size $size1 --public-ip-address $Pip04 --public-ip-address-allocation static --subnet $SUBNETID --boot-diagnostics-storage $D --license-type Windows_Server --nsg ""
 
 
