@@ -37,3 +37,5 @@ export SUBNETN=$(az network vnet subnet show --resource-group $RG --vnet-name $V
 az network vnet subnet update -g $RG --vnet-name $VNet -n $SUBNETN --network-security-group $Nsg
 
 az vm create --resource-group $RG -n $VM -l $L --image $OS1 --admin-username $user --admin-password $pass --size $VMSize2 --public-ip-address $Pip --public-ip-address-allocation static --subnet $SUBNETID --boot-diagnostics-storage $D --license-type Windows_Server --nsg ""
+
+#
