@@ -1,0 +1,11 @@
+Transpoze with grouping
+
+=INDEX($A:$A,ROW(A1)*7-7+COLUMN(A1))
+=INDEX($A:$A,ROW(B1)*7-7+COLUMN(B1))
+=INDEX($A:$A,ROW(G1)*7-7+COLUMN(G1))
+=INDEX($A:$A,ROW(A6)*7-7+COLUMN(A6))
+=INDEX($A:$A,ROW(G6)*7-7+COLUMN(G6))
+
+link down..
+
+https://www.edupristine.com/blog/cell-referencing-in-excel
